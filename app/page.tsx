@@ -19,7 +19,7 @@ const Dashboard = () => {
         </div>
         <nav>
           <p className="font-bold text-indigo-800 mb-2">Mood Tracker 📝</p>
-          <ul className="space-y-2 mb-4">
+          <ul className="space-y-2 mb-4 text-black">
             {["Home", "Track", "Journal", "Reflections", "Entries"].map((item) => (
               <li 
                 key={item} 
@@ -31,7 +31,7 @@ const Dashboard = () => {
             ))}
           </ul>
           <p className="font-semibold text-indigo-800 mb-2">Thoughts 💭</p>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-black">
             {["Profile", "Preferences", "Privacy"].map((item) => (
               <li 
                 key={item} 
