@@ -18,7 +18,7 @@ const Dashboard = () => {
           </div>
         </div>
         <nav>
-          <p className="font-semibold text-indigo-800 mb-2">Mood Tracker 📝</p>
+          <p className="font-bold text-indigo-800 mb-2">Mood Tracker 📝</p>
           <ul className="space-y-2 mb-4">
             {["Home", "Track", "Journal", "Reflections", "Entries"].map((item) => (
               <li 
