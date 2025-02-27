@@ -68,18 +68,18 @@ const Dashboard = () => {
         {/* Profile Modal */}
         {showProfileModal && (
           <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 p-4">
-            <div className="bg-white p-6 rounded shadow-lg w-full max-w-md">
+            <div className="bg-slate-600 p-6 rounded shadow-lg w-full max-w-md">
               <h2 className="text-xl font-semibold mb-4 text-indigo-800">Update Profile</h2>
               <input type="text" placeholder="New Username" className="w-full p-2 border rounded mb-4" />
               <input type="email" placeholder="New Email" className="w-full p-2 border rounded mb-4" />
               <div className="flex justify-end space-x-2">
                 <button 
-                  className="px-4 py-2 bg-gray-300 rounded" 
+                  className="px-4 py-2 bg-slate-600 rounded" 
                   onClick={() => setShowProfileModal(false)}
                 >
                   Cancel
                 </button>
-                <button className="px-4 py-2 bg-indigo-500 text-white rounded">Save</button>
+                <button className="px-4 py-2 bg-indigo-500 text-black rounded">Save</button>
               </div>
             </div>
           </div>
