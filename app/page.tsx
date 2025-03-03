@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
     <div className="flex flex-col md:flex-row h-screen bg-gray-100 relative">
       {/* Mobile Sidebar Toggle */}
       <button
-        className="md:hidden fixed top-4 right-4 z-50 p-3 bg-blue-500 text-white rounded-full shadow-lg"
+        className="md:hidden fixed top-4 right-4 z-50 p-3 bg-blue-500 text-black rounded-full shadow-lg"
         onClick={() => setSidebarOpen(!sidebarOpen)}
         aria-label="Toggle sidebar"
       >
@@ -31,8 +31,8 @@ const Dashboard: React.FC = () => {
         <div className="flex items-center mb-6">
           <div className="w-12 h-12 bg-gray-300 rounded-full" />
           <div className="ml-4">
-            <p className="font-bold">TRACKER USER</p>
-            <p className="text-sm text-gray-500">trackeruser@example.com</p>
+            <p className="font-bold text-black">TRACKER USER</p>
+            <p className="text-sm text-black">trackeruser@example.com</p>
           </div>
         </div>
         <nav>
@@ -65,12 +65,12 @@ interface SidebarSectionProps {
 
 const SidebarSection: React.FC<SidebarSectionProps> = ({ title, items, activeSection, setActiveSection }) => (
   <div>
-    <p className="font-semibold text-gray-700 mb-2">{title}</p>
+    <p className="font-semibold text-black mb-2">{title}</p>
     <ul className="space-y-2 mb-4">
       {items.map((item) => (
         <li
           key={item}
-          className={`cursor-pointer transition-transform ${
+          className={`cursor-pointer text-black transition-transform ${
             activeSection === item ? "text-blue-500 font-bold" : "hover:text-blue-500 hover:scale-105"
           }`}
           onClick={() => setActiveSection(item)}
@@ -87,17 +87,17 @@ interface ProfileHeaderProps {
 }
 
 const ProfileHeader: React.FC<ProfileHeaderProps> = ({ setShowProfileModal }) => (
-  <div className="flex flex-col md:flex-row justify-between items-center mb-8 space-y-4 md:space-y-0">
+  <div className="flex flex-col md:flex-row justify-between lg:md:items-center mb-8 space-y-4 md:space-y-0">
     <div className="flex items-center space-x-4">
       <div className="w-24 h-24 bg-gray-300 rounded" />
       <div>
-        <h1 className="text-2xl font-bold">TRACKER USER</h1>
-        <p className="text-gray-600">@trackerusername</p>
-        <p className="text-sm text-gray-500">21 friends • 9 following • 25 followers</p>
+        <h1 className="text-2xl font-bold text-black">TRACKER USER</h1>
+        <p className=" text-black">@trackerusername</p>
+        <p className="text-sm text-black">21 friends • 9 following • 25 followers</p>
       </div>
     </div>
     <button
-      className="px-4 py-2 bg-blue-500 text-white rounded hover:scale-105 transition-transform"
+      className="px-4 py-2 bg-blue-500 sm:items-c text-white rounded hover:scale-105 transition-transform"
       onClick={() => setShowProfileModal(true)}
     >
       Update Profile ✏️
@@ -112,11 +112,11 @@ interface ProfileModalProps {
 const ProfileModal: React.FC<ProfileModalProps> = ({ setShowProfileModal }) => (
   <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
     <div className="bg-white p-6 rounded shadow-lg w-96">
-      <h2 className="text-xl font-semibold mb-4">Update Profile</h2>
+      <h2 className="text-xl text-black font-bold mb-4">Update Profile</h2>
       <input type="text" placeholder="New Username" className="w-full p-2 border rounded mb-4" />
       <input type="email" placeholder="New Email" className="w-full p-2 border rounded mb-4" />
       <div className="flex justify-end space-x-2">
-        <button className="px-4 py-2 bg-gray-300 rounded" onClick={() => setShowProfileModal(false)}>Cancel</button>
+        <button className="px-4 py-2 bg-gray-900 rounded" onClick={() => setShowProfileModal(false)}>Cancel</button>
         <button className="px-4 py-2 bg-blue-500 text-white rounded">Save</button>
       </div>
     </div>
@@ -129,8 +129,8 @@ interface DynamicSectionProps {
 
 const DynamicSection: React.FC<DynamicSectionProps> = ({ activeSection }) => (
   <section>
-    <h2 className="text-lg font-semibold mb-4">{activeSection} 📌</h2>
-    {activeSection === "Home" ? <HomeContent /> : <p className="text-gray-600">You are now viewing the {activeSection} section.</p>}
+    <h2 className="text-lg font-semibold text-black mb-4">{activeSection} 📌</h2>
+    {activeSection === "Home" ? <HomeContent /> : <p className="text-black">You are now viewing the {activeSection} section.</p>}
   </section>
 );
 
@@ -149,7 +149,7 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ title, items }) => (
   <div className="mb-8">
-    <h2 className="text-lg font-semibold mb-4">{title}</h2>
+    <h2 className="text-lg text-black mb-4">{title}</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {items.map((text, index) => (
         <div key={index} className="p-6 bg-gray-200 text-center rounded hover:scale-105 transition-transform cursor-pointer">
